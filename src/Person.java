@@ -8,14 +8,4 @@ public class Person {
         this.surname = surname;
         this.tickets = tickets;
     }
-        public void setTickets () {
-            if (tickets != 0) {
-                tickets--;
-                System.out.println(name + " "+ surname + " посетил(а) аттракцион.");
-            }
-        }
-    }
-
-
-
-
+}

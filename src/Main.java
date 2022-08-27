@@ -5,8 +5,12 @@ public class Main {
         Queue<Person> clients = new ArrayDeque<>(generateClients());
 
         while (!clients.isEmpty()) {
-            clients.poll().setTickets();
-            clients.add(clients.peek());
+            Person c = clients.poll();
+            if (c.tickets != 0) {
+                c.tickets--;
+                System.out.println(c.name + " " + c.surname + " посетил(а) аттракцион.");
+                clients.add(c);
+            }
         }
     }
 
@@ -20,11 +24,3 @@ public class Main {
         return list;
     }
 }
-
-
-
-
-
-
-
-
